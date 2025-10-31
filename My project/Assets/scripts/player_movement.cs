@@ -1,27 +1,32 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Movement speed
-
-    private Rigidbody2D rb; // Reference to Rigidbody2D
-    private Vector2 movement; // Stores movement direction
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); // Gets Rigidbody2D from the player
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        // Get input from keyboard
-        movement.x = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right arrows
-        movement.y = Input.GetAxisRaw("Vertical");   // W/S or Up/Down arrows
+        // Read input using the new Input System
+        moveInput = Vector2.zero;
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.wKey.isPressed) moveInput.y += 1;
+            if (Keyboard.current.sKey.isPressed) moveInput.y -= 1;
+            if (Keyboard.current.aKey.isPressed) moveInput.x -= 1;
+            if (Keyboard.current.dKey.isPressed) moveInput.x += 1;
+        }
     }
 
     void FixedUpdate()
     {
-        // Move player using Rigidbody2D
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + moveInput.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 }
