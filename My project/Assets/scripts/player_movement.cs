@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,10 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    public bool haveWater;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        haveWater = false;
     }
 
     void Update()
@@ -28,5 +31,14 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput.normalized * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("water"))
+        {
+            Destroy(other.gameObject);
+            haveWater = true;
+        }
     }
 }
