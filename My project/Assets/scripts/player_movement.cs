@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     public bool haveWater;
+    public bool plant;
 
     void Start()
     {
@@ -39,6 +40,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             haveWater = true;
+        }
+
+        if (other.gameObject.CompareTag("pot"))
+        {
+            
+            plant = true;
+        }
+
+        if (other.gameObject.CompareTag("end"))
+        {
+
         }
     }
 }

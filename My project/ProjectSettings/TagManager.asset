@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - water
+  - pot
+  - player
+  - end
   layers:
   - Default
   - TransparentFX
