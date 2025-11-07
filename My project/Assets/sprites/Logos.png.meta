@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 419435d37e4761a4581727ca62ea2598
+guid: 288e9ae46da1cd74694d5146a075a2ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6499563470404383141
-    second: Water Bucket_0
+      213: -8943954236518209237
+    second: Logos_0
+  - first:
+      213: -3816170830036847784
+    second: Logos_1
+  - first:
+      213: -4532174597539475674
+    second: Logos_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water Bucket_0
+      name: Logos_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 11
-        width: 62
-        height: 71
+        x: 0
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5e0177b579ecc5a0800000000000000
-      internalID: -6499563470404383141
+      spriteID: b296bfc4201b0e380800000000000000
+      internalID: -8943954236518209237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logos_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853327959dc3a0bc0800000000000000
+      internalID: -3816170830036847784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logos_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f4c9d473b7a11c0800000000000000
+      internalID: -4532174597539475674
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: baed184b7a9bc8c4cbd44ac56a401378
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +183,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Water Bucket_0: -6499563470404383141
+      Logos_0: -8943954236518209237
+      Logos_1: -3816170830036847784
+      Logos_2: -4532174597539475674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
